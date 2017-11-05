@@ -1,0 +1,7 @@
+# KerstEvent
+Het kerstevent van GewoonHDEnterprise
+
+IT IS FORBIDDEN TO:
+- USE ANY OF THIS CODE.
+- CONTRIBUTE THIS CODE.
+- MAKE FINANCIAL PROFIT OF THE CODE.
