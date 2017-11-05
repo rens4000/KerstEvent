@@ -1,0 +1,7 @@
+name: KerstEvent
+version: 1.0
+main: nl.gewoonhdgaming.kerstevent.KerstEvent
+commands:
+  kerstevent:
+    description: Het algemene commando voor het kerstevent.
+    aliases: [ke, kerste]
