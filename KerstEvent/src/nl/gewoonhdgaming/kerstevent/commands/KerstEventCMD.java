@@ -69,10 +69,6 @@ public class KerstEventCMD implements CommandExecutor {
 		}
 		
 		if(args.length > 0) {
-//			if(!(args[0].e"setspawn" || args[0] == "removespawn" || args[0] == "toggle" || args[0] == "join" || args[0] == "leave" ||args[0] == "setspawn")) {
-//				p.sendMessage(cu.ERROR + "Commando niet gevonden! Doe /kerstevent om alle commando's te bekijken.");
-//				return false;
-//			}
 			if(args[0].equalsIgnoreCase("removespawn")) {
 				if(!p.hasPermission("KerstEvent.Admin")) {
 					p.sendMessage(cu.ERROR + "Je hebt geen permissie om dat commando uit te voeren!");

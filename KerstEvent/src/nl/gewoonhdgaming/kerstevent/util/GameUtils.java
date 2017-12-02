@@ -45,6 +45,8 @@ public class GameUtils {
         Objective objective = board.registerNewObjective("kerstevent", ""); 
         objective.setDisplaySlot(DisplaySlot.SIDEBAR);
         objective.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "KerstEvent");
+        Score streep = objective.getScore(ChatColor.GRAY + "" + ChatColor.BOLD +"===");
+        streep.setScore(11);
         Score score = objective.getScore("");
         score.setScore(10);
         Score score1 = objective.getScore(ChatColor.YELLOW + "Score: " + u.getScore());
@@ -53,8 +55,10 @@ public class GameUtils {
         score2.setScore(8);
         Score score3 = objective.getScore("");
         score3.setScore(7);
+        Score streep1 = objective.getScore(ChatColor.GRAY + "" + ChatColor.BOLD +"===");
+        streep1.setScore(6);
         Score score4 = objective.getScore(ChatColor.AQUA + "play.gewoonhdgaming.nl");
-        score4.setScore(6);
+        score4.setScore(5);
         p.setScoreboard(board);
 	}
 	

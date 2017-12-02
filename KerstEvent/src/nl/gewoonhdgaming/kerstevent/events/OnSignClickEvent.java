@@ -12,6 +12,7 @@ import org.bukkit.inventory.ItemStack;
 
 import nl.gewoonhdgaming.kerstevent.KerstEvent;
 import nl.gewoonhdgaming.kerstevent.util.ChatUtils;
+import nl.gewoonhdgaming.kerstevent.util.GameUtils;
 
 public class OnSignClickEvent implements Listener {
 
@@ -29,6 +30,19 @@ public class OnSignClickEvent implements Listener {
 		if(e.getAction() == Action.RIGHT_CLICK_BLOCK) {
 			if(e.getClickedBlock().getType() == Material.SIGN ||e.getClickedBlock().getType() == Material.SIGN_POST ||e.getClickedBlock().getType() == Material.WALL_SIGN) {
 				 Sign sign = (Sign) e.getClickedBlock().getState();
+				 if(sign.getLine(0).equalsIgnoreCase(ChatColor.WHITE + "[" + ChatColor.AQUA + "KerstEvent" + ChatColor.WHITE + "]")) {
+					 Player p = e.getPlayer();
+					 GameUtils gu = new GameUtils();
+					 if(!ke.active) {
+							p.sendMessage(cu.ERROR + "De game is niet actief!");
+							return;
+						}
+						if(ke.USERS.containsKey(p.getUniqueId())) {
+							p.sendMessage(cu.ERROR + "Je zit al in de game!");
+							return;
+						}
+						gu.addPlayer(p, ke);
+				 }
 				 if(sign.getLine(0).equalsIgnoreCase(ChatColor.WHITE + "[" + ChatColor.AQUA + "SnowGenerator" + ChatColor.WHITE + "]")) {
 					 if(!ke.USERS.containsKey(e.getPlayer().getUniqueId())) {
 						 e.getPlayer().sendMessage(cu.ERROR + "Je zit niet in de game!");

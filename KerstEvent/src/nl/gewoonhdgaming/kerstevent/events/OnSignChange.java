@@ -29,6 +29,11 @@ public class OnSignChange implements Listener {
 			e.setLine(3, ChatColor.WHITE + "te krijgen.");
 			e.getPlayer().sendMessage(cu.PREFIX + "Sneeuw generator gemaakt!");
 		}
+		if(e.getLine(0).equalsIgnoreCase("[kerstevent]")) {
+			e.setLine(0, ChatColor.WHITE + "[" + ChatColor.AQUA + "KerstEvent" + ChatColor.WHITE + "]");
+			e.setLine(1, ChatColor.WHITE + "Join!");
+			e.getPlayer().sendMessage(cu.PREFIX + "Join sign gemaakt!");
+		}
 	}
 
 }
